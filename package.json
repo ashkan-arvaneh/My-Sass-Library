@@ -1,0 +1,29 @@
+{
+  "name": "my-sass-library",
+  "version": "1.0.0",
+  "description": "My own Sass library with everything that I think would be useful to start a Front End project",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashkan-arvaneh/My-Sass-Library.git"
+  },
+  "keywords": [
+    "sass",
+    "library"
+  ],
+  "author": "Ashkan Arvaneh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashkan-arvaneh/My-Sass-Library/issues"
+  },
+  "homepage": "https://github.com/ashkan-arvaneh/My-Sass-Library#readme"
+}
