@@ -2,15 +2,26 @@
   "name": "my-sass-library",
   "version": "1.0.0",
   "description": "My own Sass library with everything that I think would be useful to start a Front End project",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "sass": "^1.26.3",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "html-webpack-plugin": "^4.2.0",
+    "html-webpack-template": "^6.2.0",
+    "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
-    "webpack": "^4.42.1"
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode development",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

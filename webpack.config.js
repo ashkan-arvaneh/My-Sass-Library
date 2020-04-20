@@ -1,18 +1,41 @@
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const config = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.scss$/,
                 use: [
-                    // Creates `style` nodes from JS strings
                     'style-loader',
-                    // Translates CSS into CommonJS
                     'css-loader',
-                    // Compiles Sass to CSS
-                    'sass-loader',
-                ],
+                    'sass-loader'
+                ]
             },
-        ],
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: require('html-webpack-template'),
+            inject: true,
+            hash: true,
+            appMountId: 'app',
+            filename: 'index.html'
+        })
+    ]
 };
+
+module.exports = config;
