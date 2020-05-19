@@ -1,4 +1,10 @@
+$primary-color: white;
+$bg: black;
+h1 {
+  color: $primary-color;
+  background-color: $bg;
+}
+
 html {
-  color: red;
-  background-color: green;
+  background-color: $bg;
 }
